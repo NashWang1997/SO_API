@@ -1,3 +1,7 @@
 --search posts
 select * from posts p
 where p.Tags like ##tag:string?%youtube-api%##
+
+--search users according to posts
+select * from users u
+where u.Id in (select OwnerUserId from posts p where p.Tags like ##tag:string?%youtube-api%##)
