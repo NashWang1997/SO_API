@@ -1,3 +1,0 @@
-//search posts
-select * from posts p
-where p.Tags like ##tag:string?%youtube-api%##
